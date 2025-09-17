@@ -1,0 +1,131 @@
+<!DOCTYPE html> <!-- Indica que el documento está escrito en HTML5 -->
+<html lang="es"> <!-- Define el idioma del documento (aquí debería ser "es" en vez de "espanish") -->
+
+<head>
+  <meta charset="UTF-8"> <!-- Configuración de caracteres, UTF-8 soporta acentos y símbolos -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Hace que la web sea responsive en móviles -->
+  <meta name="description" content="Somos una empresa..."> <!-- Descripción para SEO (cómo aparece en Google) -->
+  <meta name="category" content="Spanish, Spain, Productos sostenibles"> <!-- Meta no estándar, describe categoría -->
+  <link rel="stylesheet" href="../css/estilos.css">
+  <!-- Enlaza un archivo CSS externo ubicado en la carpeta 'css' para aplicar estilos personalizados -->
+  <title>REWOOD</title> <!-- Título de la página, que aparecerá en la pestaña del navegador -->
+</head>
+
+<body> <!-- Cuerpo principal de la página -->
+  <!-- CABECERA con logo, título, menú, buscador... -->
+  <header> <!-- Inicio de la cabecera -->
+    <nav class="navbar"> <!-- Menú de navegación principal -->
+      <div> <!-- Contenedor para logo y título -->
+        <img src="../img/logorewood.png" alt="imagen del logo" class="logo"> <!-- Imagen del logo -->
+        <h1 id="titulo">REWOOD</h1> <!-- Título principal -->
+      </div>
+      <div class="buscador"> <!-- Contenedor del buscador -->
+        <input type="text" placeholder="¿Qué es lo que buscas?"> <!-- Barra de búsqueda -->
+      </div>
+      <ul class="menu"> <!-- Lista de enlaces del menú -->
+        <li><a href="/index.html">Inicio</a></li> <!-- Enlace a inicio -->
+        <li><a href="/PáginasHTML/galeria.html" class="active">Productos</a></li> <!-- Enlace a productos (activo) -->
+        <li><a href="/PáginasHTML/presupuesto.html">Presupuesto</a></li> <!-- Enlace a presupuesto -->
+        <li><a href="/PáginasHTML/contacto.html">Contacto</a></li> <!-- Enlace a contacto -->
+      </ul>
+    </nav>
+  </header>
+
+  <main> <!-- Contenido principal de la página -->
+    <section class="galeria"> <!-- Sección de galería de imágenes -->
+      <div class="item item1"><img src="/img/C2.jpg" alt="Imagen 1"></div> <!-- Imagen 1 -->
+      <div class="item item2"><img src="/img/C9.png" alt="Imagen 2"></div> <!-- Imagen 2 -->
+      <div class="item item3"><img src="/img/C3.jpg" alt="Imagen 3"></div> <!-- Imagen 3 -->
+      <div class="item item4"><img src="/img/C5.png" alt="Imagen 4"></div> <!-- Imagen 4 -->
+      <div class="item item5"><img src="/img/C1.jpg" alt="Imagen 5"></div> <!-- Imagen 5 -->
+      <div class="item item6"><img src="/img/C7.png" alt="Imagen 6"></div> <!-- Imagen 6 -->
+      <div class="item item7"><img src="/img/C8.png" alt="Imagen 7"></div> <!-- Imagen 7 -->
+      <div class="item item8"><img src="/img/C6.png" alt="Imagen 8"></div> <!-- Imagen 8 -->
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer"> <!-- Inicio del pie de página -->
+    <div class="footer-contenido"> <!-- Contenedor principal del footer -->
+
+      <!-- Logo o nombre de empresa -->
+      <div class="footer-logo"> <!-- Bloque de logo/nombre -->
+        <h2>ReWood</h2> <!-- Nombre de la empresa -->
+        <p>Diseñamos y fabricamos muebles respetuosos con la naturaleza, eficientes, duraderos y originales.</p>
+        <!-- Breve descripción -->
+      </div>
+
+      <!-- Sección de enlaces -->
+      <div class="footer-enlaces"> <!-- Bloque con enlaces útiles -->
+        <h3>Enlaces útiles</h3>
+        <ul>
+          <li><a href="/index.html">Inicio</a></li> <!-- Enlace a inicio -->
+          <li><a href="/PáginasHTML/galeria.html">Productos</a></li> <!-- Enlace a productos -->
+          <li><a href="/PáginasHTML/contacto.html">Sobre nosotros</a></li> <!-- Enlace a sobre nosotros -->
+          <li><a href="/PáginasHTML/contacto.html">Contacto</a></li> <!-- Enlace a contacto -->
+        </ul>
+      </div>
+
+      <!-- Dirección -->
+      <div class="footer-direccion"> <!-- Bloque con información de contacto -->
+        <h3>Contacto</h3>
+        <p>C/ Ejemplo 123, Los Palacios y Villafranca, Sevilla</p> <!-- Dirección -->
+        <p>Tel: +34 600 123 456</p> <!-- Teléfono -->
+        <p>Email: info@rewood.com</p> <!-- Correo -->
+
+        <div class="footer-redes"> <!-- Iconos SVG de redes sociales -->
+          <a href="https://www.facebook.com/?locale=es_ES" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#333" viewBox="0 0 24 24">
+              <path
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.003 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 17.003 22 12z" />
+            </svg>
+          </a>
+          <a href="https://x.com/?lang=es" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#333" viewBox="0 0 24 24">
+              <path
+                d="M22.46 6c-.77.35-1.6.58-2.46.69a4.28 4.28 0 001.88-2.37 8.44 8.44 0 01-2.71 1.04 4.22 4.22 0 00-7.19 3.85A11.95 11.95 0 013 4.79a4.22 4.22 0 001.31 5.64 4.19 4.19 0 01-1.91-.53v.05a4.23 4.23 0 003.39 4.14 4.22 4.22 0 01-1.9.07 4.23 4.23 0 003.94 2.93A8.47 8.47 0 012 19.54 11.94 11.94 0 008.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.35-.02-.53A8.34 8.34 0 0022.46 6z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#333" viewBox="0 0 24 24">
+              <path
+                d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z" />
+            </svg>
+          </a>
+          <a href="https://es.linkedin.com/?mcid=6968657504633266178&src=go-pa&cid=&gad_campaignid=18146679037"
+            target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#333" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM8.339 19H5.664V9h2.675v10zM7 7.691c-.857 0-1.552-.695-1.552-1.552S6.143 4.587 7 4.587s1.552.695 1.552 1.552S7.857 7.691 7 7.691zM20 19h-2.667v-4.991c0-1.19-.021-2.724-1.66-2.724-1.662 0-1.917 1.296-1.917 2.637V19h-2.667V9h2.56v1.366h.036c.356-.674 1.226-1.386 2.525-1.386 2.702 0 3.209 1.777 3.209 4.087V19z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aviso legal extenso -->
+    <div class="footer-legal"> <!-- Bloque con aviso legal -->
+      <h3>Aviso legal</h3>
+      <p>
+        ReWood, empresa dedicada al diseño y fabricación de muebles de madera natural,
+        cumple con la normativa vigente en materia de protección de datos y comercio electrónico.
+        Todos los contenidos de este sitio web, incluyendo textos, imágenes, logotipos y diseños,
+        están protegidos por derechos de propiedad intelectual y no podrán ser utilizados sin autorización previa.
+        La información aquí proporcionada tiene carácter informativo y podrá ser modificada sin previo aviso.
+        ReWood no se hace responsable del uso indebido que se realice de la información contenida en esta página.
+      </p> <!-- Texto legal explicativo -->
+      <p>
+        Para más información sobre el tratamiento de datos personales y políticas de privacidad,
+        puede consultar nuestra <a href="/PáginasHTML/contacto.html">Política de Privacidad</a>.
+      </p> <!-- Enlace a política de privacidad -->
+    </div>
+
+    <!-- Copy -->
+    <div class="footer-copy"> <!-- Bloque con derechos reservados -->
+      <p>&copy; 2025 ReWood. Todos los derechos reservados.</p> <!-- Copyright -->
+    </div>
+  </footer>
+</body>
+
+</html> <!-- Cierre del documento HTML -->

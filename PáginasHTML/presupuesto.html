@@ -1,0 +1,186 @@
+<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
+<html lang="es"> <!-- Idioma del contenido (mejor usar 'es' en lugar de 'espanish') -->
+
+<head>
+  <meta charset="UTF-8"> <!-- Configura la codificación (soporta acentos y caracteres especiales) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la web responsive -->
+  <meta name="description" content="Somos una empresa..."> <!-- Descripción que aparece en Google (SEO) -->
+  <meta name="category" content="Spanish, Spain, Productos sostenibles"> <!-- Meta no estándar, indica categoría -->
+  <link rel="stylesheet" href="../css/estilos.css"> <!-- Conecta el CSS externo para estilos -->
+  <title>REWOOD</title> <!-- Título que aparece en la pestaña del navegador -->
+</head>
+
+<body class="body-presupuesto"> <!-- Body con clase para estilos específicos -->
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar"> <!-- Menú de navegación -->
+      <div>
+        <img src="../img/logorewood.png" alt="imagen del logo" class="logo"> <!-- Logo -->
+        <h1 id="titulo">REWOOD</h1> <!-- Título de la empresa -->
+      </div>
+
+      <!-- Barra de búsqueda -->
+      <div class="buscador">
+        <input type="text" placeholder="¿Qué es lo que buscas?">
+      </div>
+
+      <!-- Menú principal -->
+      <ul class="menu">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="/PáginasHTML/galeria.html">Productos</a></li>
+        <li><a href="/PáginasHTML/presupuesto.html" class="active">Presupuesto</a></li> <!-- Página actual -->
+        <li><a href="/PáginasHTML/contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <h1>Formulario de Solicitud</h1> <!-- Título principal -->
+
+    <form id="formPresupuesto"> <!-- Formulario principal -->
+
+      <!-- DATOS DE CONTACTO -->
+      <fieldset> <!-- Agrupa campos relacionados -->
+        <legend>Datos de Contacto</legend> <!-- Título del grupo -->
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" maxlength="15" required> <!-- Campo de texto -->
+        <br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" maxlength="40" required>
+        <br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" maxlength="9" required>
+        <br>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" required>
+      </fieldset>
+
+      <!-- PRESUPUESTO -->
+      <fieldset>
+        <legend>Presupuesto</legend>
+
+        <!-- Selección de producto -->
+        <label for="producto">Producto:</label>
+        <select id="producto" required>
+          <option value="">-- Selecciona un producto --</option>
+          <option value="89.99">Duolo - 89.99€</option>
+          <option value="69.99">Aika - 69.99€</option>
+          <option value="59.99">Fistel - 59.99€</option>
+          <option value="79.99">Pryslim - 79.99€</option>
+        </select>
+        <br>
+
+        <!-- Plazo de entrega -->
+        <label for="plazo">Plazo de entrega (meses):</label>
+        <input type="number" id="plazo" min="1" max="24" value="1" required>
+        <br>
+
+        <!-- Opciones extra -->
+        <fieldset>
+          <legend>Extras</legend>
+          <label><input type="checkbox" class="extra" value="15"> Garantía extra (+15€)</label><br>
+          <label><input type="checkbox" class="extra" value="40"> Instalación (+40€)</label><br>
+          <label><input type="checkbox" class="extra" value="50"> Soporte premium (+50€)</label>
+        </fieldset>
+
+        <!-- Total dinámico -->
+        <p><strong>Presupuesto total: </strong><span id="total">0</span> €</p>
+      </fieldset>
+
+      <!-- CONDICIONES -->
+      <label>
+        <input type="checkbox" id="condiciones" required> <!-- Obligatorio aceptar -->
+        Acepto las condiciones de privacidad
+      </label>
+      <br><br>
+
+      <!-- Botones -->
+      <button type="submit">Enviar</button>
+      <button type="reset">Resetear</button>
+    </form>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-contenido">
+
+      <!-- Logo y descripción -->
+      <div class="footer-logo">
+        <h2>ReWood</h2>
+        <p>Diseñamos y fabricamos muebles respetuosos con la naturaleza, eficientes, duraderos y originales.</p>
+      </div>
+
+      <!-- Enlaces útiles -->
+      <div class="footer-enlaces">
+        <h3>Enlaces útiles</h3>
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/PáginasHTML/galeria.html">Productos</a></li>
+          <li><a href="/PáginasHTML/contacto.html">Sobre nosotros</a></li>
+          <li><a href="/PáginasHTML/contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Información de contacto -->
+      <div class="footer-direccion">
+        <h3>Contacto</h3>
+        <p>C/ Ejemplo 123, Los Palacios y Villafranca, Sevilla</p>
+        <p>Tel: +34 600 123 456</p>
+        <p>Email: info@rewood.com</p>
+
+        <div class="footer-redes"> <!-- Iconos SVG de redes sociales -->
+          <a href="https://www.facebook.com/?locale=es_ES" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#333" viewBox="0 0 24 24">
+              <path
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.003 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 17.003 22 12z" />
+            </svg>
+          </a>
+          <a href="https://x.com/?lang=es" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#333" viewBox="0 0 24 24">
+              <path
+                d="M22.46 6c-.77.35-1.6.58-2.46.69a4.28 4.28 0 001.88-2.37 8.44 8.44 0 01-2.71 1.04 4.22 4.22 0 00-7.19 3.85A11.95 11.95 0 013 4.79a4.22 4.22 0 001.31 5.64 4.19 4.19 0 01-1.91-.53v.05a4.23 4.23 0 003.39 4.14 4.22 4.22 0 01-1.9.07 4.23 4.23 0 003.94 2.93A8.47 8.47 0 012 19.54 11.94 11.94 0 008.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.35-.02-.53A8.34 8.34 0 0022.46 6z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#333" viewBox="0 0 24 24">
+              <path
+                d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z" />
+            </svg>
+          </a>
+          <a href="https://es.linkedin.com/?mcid=6968657504633266178&src=go-pa&cid=&gad_campaignid=18146679037"
+            target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#333" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM8.339 19H5.664V9h2.675v10zM7 7.691c-.857 0-1.552-.695-1.552-1.552S6.143 4.587 7 4.587s1.552.695 1.552 1.552S7.857 7.691 7 7.691zM20 19h-2.667v-4.991c0-1.19-.021-2.724-1.66-2.724-1.662 0-1.917 1.296-1.917 2.637V19h-2.667V9h2.56v1.366h.036c.356-.674 1.226-1.386 2.525-1.386 2.702 0 3.209 1.777 3.209 4.087V19z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aviso legal -->
+    <div class="footer-legal">
+      <h3>Aviso legal</h3>
+      <p>ReWood, empresa dedicada al diseño... (texto legal)...</p>
+      <p>
+        Para más info consulte nuestra <a href="/PáginasHTML/contacto.html">Política de Privacidad</a>.
+      </p>
+    </div>
+
+    <!-- Copy -->
+    <div class="footer-copy">
+      <p>&copy; 2025 ReWood. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script de funcionalidades -->
+  <script src="../js/javaScript.js"></script>
+</body>
+
+</html>

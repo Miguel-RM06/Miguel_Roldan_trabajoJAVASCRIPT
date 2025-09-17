@@ -1,0 +1,618 @@
+/* ===============================
+   RESETEO BÁSICO DE ESTILOS
+   =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Incluye bordes y padding en el cálculo de ancho/alto */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif, Times, serif, sans-serif;
+  padding-top: 80px;
+  /* deja espacio arriba para la navbar fija */
+  background-color: #fefffe;
+  /* color de fondo general */
+}
+
+/* ===============================
+   BARRA DE NAVEGACIÓN
+   =============================== */
+.navbar {
+  position: fixed;
+  /* se mantiene arriba al hacer scroll */
+  height: 7%;
+  top: 0%;
+  width: 100%;
+  background-color: #f6f0ea;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* sombra sutil */
+  z-index: 1000;
+  /* siempre encima del contenido */
+}
+
+.logo {
+  position: absolute;
+  height: 60%;
+  left: 3%;
+  top: 20%;
+}
+
+#titulo {
+  font-size: 200%;
+  position: absolute;
+  left: 5%;
+  top: 28%;
+}
+
+/* ===============================
+   BARRA DE BÚSQUEDA
+   =============================== */
+.buscador input {
+  position: fixed;
+  left: 20%;
+  top: 1.5%;
+  width: 300px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  background-color: #f1f1f1;
+  font-size: 14px;
+}
+
+/* ===============================
+   MENÚ PRINCIPAL
+   =============================== */
+.menu {
+  list-style: none;
+  /* elimina viñetas */
+  display: flex;
+  gap: 20px;
+  /* espacio entre enlaces */
+}
+
+.menu li a {
+  position: relative;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 400;
+  padding: 5px 10px;
+}
+
+/* Línea animada debajo de los enlaces */
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: transform 0.3s ease;
+}
+
+.menu li a:hover::after,
+.menu li a.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ===============================
+   SWIPER (SLIDER DE IMÁGENES)
+   =============================== */
+.swiper {
+  width: 100%;
+  height: 950px;
+  margin: auto;
+}
+
+.h2-slide {
+  position: absolute;
+  left: 5%;
+  top: 38%;
+  color: white;
+  font-size: 200%;
+  z-index: 10;
+}
+
+.p-slide {
+  position: absolute;
+  left: 85%;
+  top: 85%;
+  color: white;
+  font-size: 130%;
+  z-index: 10;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* recorta sin deformar */
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+/* Botón personalizado en cada slide */
+.btn-verproductos {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  user-select: none;
+}
+
+.btn-verproductos:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* ===============================
+   SECTION 2 - PRODUCTOS
+   =============================== */
+.section2 {
+  margin-top: 3%;
+  justify-content: center;
+}
+
+.h2-section2 {
+  margin-left: 4%;
+}
+
+.contenedorprincipal-index {
+  display: flex;
+  flex-wrap: wrap;
+  /* permite saltar de línea */
+  justify-content: space-between;
+  gap: 30px;
+  margin: 5%;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22%;
+  min-width: 220px;
+  padding: 15px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.producto:hover {
+  border-color: #000;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.producto img {
+  width: 100%;
+  max-width: 220px;
+  margin-bottom: 15px;
+}
+
+.texto-producto h4 {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.texto-producto p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* ===============================
+   SECTION 3 - IMAGEN + TEXTO VERDE
+   =============================== */
+.section3-imagen {
+  display: flex;
+  width: 100%;
+  height: 1050px;
+  /* altura fija */
+}
+
+/* Columna de imagen */
+.imagen {
+  flex: 4;
+}
+
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto lateral */
+.section3-items {
+  margin-left: 60px;
+}
+
+.verde {
+  flex: 6;
+  background-color: #869c81;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 20px;
+  height: 1050px;
+}
+
+#enlace-section3 {
+  color: inherit;
+  /* mantiene color blanco */
+}
+
+/* ===============================
+   SECTION 4 - NOTICIAS
+   =============================== */
+.h2-section4 {
+  margin: 40px 0 -10px 0;
+  text-align: center;
+}
+
+/* Contenedor de noticias en grid */
+#contenedor-noticias {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 20px;
+}
+
+/* Tarjeta de noticia */
+.noticia {
+  background: #f6f0ea;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.noticia:hover {
+  transform: scale(1.02);
+}
+
+.noticia .titulo {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.noticia .fecha {
+  display: block;
+  margin-bottom: 10px;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.noticia .contenido {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+.footer {
+  background: #f1f1f1;
+  /* Gris claro */
+  color: #333;
+  padding: 50px 60px 30px 60px;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* Logo e introducción */
+.footer-logo {
+  flex: 1 1 250px;
+}
+
+.footer-logo h2 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+  color: #111;
+}
+
+.footer-logo p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Enlaces */
+.footer-enlaces {
+  flex: 1 1 200px;
+}
+
+.footer-enlaces h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.footer-enlaces ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-enlaces ul li {
+  margin-bottom: 8px;
+}
+
+.footer-enlaces ul li a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-enlaces ul li a:hover {
+  color: #869c81;
+}
+
+/* Dirección y contacto */
+.footer-direccion {
+  flex: 1 1 250px;
+}
+
+.footer-direccion h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.footer-direccion p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Redes sociales */
+.footer-redes {
+  margin-top: 10px;
+}
+
+.footer-redes svg {
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  fill: #333;
+  /* color por defecto */
+  transition: fill 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.footer-redes svg:hover {
+  fill: #869c81;
+  /* cambia de color al pasar el ratón */
+  transform: scale(1.2);
+}
+
+.footer-redes a img {
+  width: 28px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+.footer-redes a img:hover {
+  transform: scale(1.2);
+}
+
+/* Aviso legal */
+.footer-legal {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.footer-legal h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-legal p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.footer-legal a {
+  color: #869c81;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* ===============================
+   GALERÍA DE IMÁGENES
+   =============================== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 columnas */
+  grid-auto-rows: 200px;
+  /* altura base de cada fila */
+  gap: 15px;
+  /* separación entre imágenes */
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Todas las imágenes */
+.galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Diferentes tamaños para el mosaico */
+.item1 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.item2 {
+  grid-column: span 2;
+}
+
+.item3 {
+  grid-row: span 2;
+}
+
+.item4 {
+  grid-column: span 1;
+}
+
+.item5 {
+  grid-column: span 2;
+}
+
+.item6 {
+  grid-row: span 2;
+}
+
+.item7 {
+  grid-column: span 1;
+}
+
+.item8 {
+  grid-column: span 2;
+}
+
+/* ===============================
+   FORMULARIO DE CONTACTO
+   =============================== */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+label {
+  display: block;
+  margin-top: 8px;
+}
+
+input,
+select,
+button {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background: #68a55a;
+  color: white;
+}
+
+button[type="reset"] {
+  background: rgba(126, 61, 61, 0.884);
+  color: white;
+}
+
+/* ===============================
+   SECCIÓN CONTACTO + MAPA
+   =============================== */
+.contacto {
+  padding: 40px;
+  background: #f5f5f5;
+  color: #333;
+}
+
+.contacto h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contacto-verde {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contacto-verde h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Mapa incrustado con Leaflet */
+#map {
+  height: 300px;
+  width: 90%;
+  margin: 20px auto 0 auto;
+  /* centrado */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
