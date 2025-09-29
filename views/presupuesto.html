@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Somos una empresa...">
+  <meta name="category" content="Spanish, Spain, Productos sostenibles">
+  <link rel="stylesheet" href="../CSS/estilos.css">
+  <title>REWOOD - Presupuesto</title>
+</head>
+
+<body class="body-presupuesto">
+  <header>
+    <nav class="navbar">
+      <div>
+        <img src="../img/logorewood.png" alt="imagen del logo" class="logo" width="30" height="60">
+        <h1 id="titulo">REWOOD</h1>
+      </div>
+
+      <div class="buscador">
+        <input type="text" placeholder="¿Qué es lo que buscas?">
+      </div>
+
+      <ul class="menu">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="titulo-formulario">Formulario de Solicitud</h2>
+
+    <form id="formPresupuesto">
+      <fieldset>
+        <legend>Datos de Contacto</legend>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" maxlength="15" required>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" maxlength="40" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" maxlength="9" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Presupuesto</legend>
+
+        <label for="producto">Producto:</label>
+        <select id="producto" required>
+          <option value="">-- Selecciona un producto --</option>
+          <option value="89.99">Duolo - 89.99€</option>
+          <option value="69.99">Aika - 69.99€</option>
+          <option value="59.99">Fistel - 59.99€</option>
+          <option value="79.99">Pryslim - 79.99€</option>
+        </select>
+
+        <label for="plazo">Plazo de entrega (meses):</label>
+        <input type="number" id="plazo" min="1" max="24" value="1" required>
+
+        <fieldset>
+          <legend>Extras</legend>
+          <label><input type="checkbox" class="extra" value="15"> Garantía extra (+15€)</label><br>
+          <label><input type="checkbox" class="extra" value="40"> Instalación (+40€)</label><br>
+          <label><input type="checkbox" class="extra" value="50"> Soporte premium (+50€)</label>
+        </fieldset>
+
+        <p><strong>Presupuesto total: </strong><span id="total">0</span> €</p>
+      </fieldset>
+
+      <label>
+        <input type="checkbox" id="condiciones" required>
+        Acepto las condiciones de privacidad
+      </label>
+
+      <button type="submit">Enviar</button>
+      <button type="reset">Resetear</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-contenido">
+      <div class="footer-logo">
+        <h2>ReWood</h2>
+        <p>Diseñamos y fabricamos muebles respetuosos con la naturaleza, eficientes, duraderos y originales.</p>
+      </div>
+
+      <div class="footer-enlaces">
+        <h3>Enlaces útiles</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="galeria.html">Productos</a></li>
+          <li><a href="contacto.html">Sobre nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-direccion">
+        <h3>Contacto</h3>
+        <p>C/ Ejemplo 123, Los Palacios y Villafranca, Sevilla</p>
+        <p>Tel: +34 600 123 456</p>
+        <p>Email: info@rewood.com</p>
+        <div class="footer-redes">
+          <a href="https://www.facebook.com/?locale=es_ES" target="_blank" rel="noopener noreferrer">
+            <!-- svg -->
+          </a>
+          <a href="https://x.com/?lang=es" target="_blank" rel="noopener noreferrer">
+            <!-- svg -->
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+            <!-- svg -->
+          </a>
+          <a href="https://es.linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <!-- svg -->
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <h3>Aviso legal</h3>
+      <p>ReWood, empresa dedicada al diseño... (texto legal)...</p>
+      <p>Para más info consulte nuestra <a href="contacto.html">Política de Privacidad</a>.</p>
+    </div>
+
+    <div class="footer-copy">
+      <p>&copy; 2025 ReWood. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/presupuesto.js" defer></script>
+</body>
+</html>

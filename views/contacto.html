@@ -1,0 +1,137 @@
+<!DOCTYPE html> <!-- Indica que el documento está escrito en HTML5 -->
+<html lang="es"> <!-- Se establece que el idioma principal del contenido es español -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Configuración de caracteres, UTF-8 soporta acentos y símbolos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la web sea responsive en móviles -->
+    <meta name="description" content="Somos una empresa..."> <!-- Descripción para SEO (cómo aparece en Google) -->
+    <meta name="category" content="Spanish, Spain, Productos sostenibles"> <!-- Meta no estándar, describe categoría -->
+    <link rel="stylesheet" href="../CSS/estilos.css"> <!-- Vincula tu hoja de estilos CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <!-- CSS de la librería Leaflet (mapas) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css">
+    <!-- CSS de la librería de rutas de Leaflet -->
+    <title>REWOOD</title> <!-- Título de la pestaña del navegador -->
+</head>
+
+<body>
+    <!-- CABECERA (NO SE MODIFICA) -->
+    <header> <!-- Sección de cabecera de la página -->
+        <nav class="navbar"> <!-- Menú de navegación principal -->
+            <div> <!-- Contenedor del logo y título -->
+                <img src="../img/logorewood.png" alt="imagen del logo" class="logo" width="30" height="60"> <!-- Logo -->
+                <!-- Imagen del logo de la empresa -->
+                <h1 id="titulo">REWOOD</h1> <!-- Título principal de la web -->
+            </div>
+            <div class="buscador"> <!-- Contenedor del buscador -->
+                <input type="text" placeholder="¿Qué es lo que buscas?">
+                <!-- Campo de búsqueda con texto por defecto -->
+            </div>
+            <ul class="menu"> <!-- Lista de enlaces del menú -->
+                <li><a href="../index.html">Inicio</a></li> <!-- Enlace a la página de inicio -->
+                <li><a href="galeria.html">Galeria</a></li> <!-- Enlace a galería de productos -->
+                <li><a href="presupuesto.html">Presupuesto</a></li>
+                <!-- Enlace a la página de presupuesto -->
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+                <!-- Enlace a contacto (activo) -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- QUIÉNES SOMOS -->
+    <section class="section3-imagen"> <!-- Sección de "Quiénes somos" con dos columnas -->
+        <div class="columna imagen"> <!-- Columna izquierda con una imagen -->
+            <img src="../img/bosque.png" alt="Imagen bosque" width="100" height="100"> <!-- Imagen ilustrativa de un bosque -->
+        </div>
+        <div class="columna verde"> <!-- Columna derecha con fondo verde y contenido -->
+            <h2 class="section3-items"> <!-- Encabezado destacado de la sección -->
+                REWOOD, UNA EMPRESA FAMILIAR COMPROMETIDA DESDE 2012<br>
+                CON CREAR Y PRODUCIR MUEBLES RESPETUOSOS, EFICIENTES, DURADEROS Y ORIGINALES.
+            </h2><br><br>
+            <p class="section3-items"> <!-- Primer párrafo de presentación -->
+                En <strong>ReWood</strong> creemos que cada mueble puede contar una historia y, al mismo tiempo, cuidar
+                del planeta.
+                Nuestro proceso se basa en el uso de <strong>madera reciclada y materiales eco-responsables
+                    certificados</strong>,
+                garantizando diseños sostenibles, duraderos y únicos.
+            </p>
+            <p class="section3-items"> <!-- Segundo párrafo sobre la misión ecológica -->
+                Porque nos importan los bosques de hoy, pero sobre todo los del mañana, trabajamos para reducir nuestra
+                huella ecológica
+                y fomentar un consumo consciente. En <strong>REWOOD</strong> cuidamos tanto de los
+                <strong>árboles</strong> como de las <strong>personas</strong>.
+            </p><br><br>
+
+            <!-- DATOS DE CONTACTO -->
+            <div class="contacto-verde"> <!-- Bloque con los datos de contacto -->
+                <h3>Contáctanos</h3>
+                <p><strong>Dirección:</strong> Calle Verde 128, Sevilla, España</p> <!-- Dirección de la empresa -->
+                <p><strong>Teléfono:</strong> +34 612 345 678</p> <!-- Teléfono -->
+                <p><strong>Email:</strong> contacto@rewood.es</p> <!-- Correo electrónico -->
+                <p><strong>Horario:</strong> Lunes a Viernes, 9:00 - 18:00</p> <!-- Horario de atención -->
+            </div>
+
+            <!-- MAPA -->
+            <div id="map"></div> <!-- Contenedor vacío donde se renderiza el mapa con Leaflet -->
+        </div>
+    </section>
+
+    <footer class="footer"> <!-- Pie de página -->
+        <div class="footer-contenido"> <!-- Contenedor principal del footer -->
+
+            <!-- Logo o nombre de empresa -->
+            <div class="footer-logo"> <!-- Bloque con logo/nombre -->
+                <h2>ReWood</h2>
+                <p>Diseñamos y fabricamos muebles respetuosos con la naturaleza, eficientes, duraderos y originales.</p>
+            </div>
+
+            <!-- Sección de enlaces -->
+            <div class="footer-enlaces"> <!-- Bloque con enlaces útiles -->
+                <h3>Enlaces útiles</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li> <!-- Enlace a inicio -->
+                    <li><a href="galeria.html">Productos</a></li> <!-- Enlace a productos -->
+                    <li><a href="contacto.html">Sobre nosotros</a></li> <!-- Enlace a "sobre nosotros" -->
+                    <li><a href="contacto.html">Contacto</a></li> <!-- Enlace a contacto -->
+                </ul>
+            </div>
+
+            <!-- Dirección -->
+            <div class="footer-direccion"> <!-- Bloque con dirección y redes sociales -->
+                <h3>Contacto</h3>
+                <p>C/ Ejemplo 123, Los Palacios y Villafranca, Sevilla</p> <!-- Dirección alternativa -->
+                <p>Tel: +34 600 123 456</p> <!-- Teléfono -->
+                <p>Email: info@rewood.com</p> <!-- Correo -->
+
+                <div class="footer-redes"> <!-- Iconos SVG de redes sociales -->
+                    <!-- SVGs igual que antes -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Aviso legal extenso -->
+        <div class="footer-legal"> <!-- Sección con aviso legal -->
+            <h3>Aviso legal</h3>
+            <p>
+                ReWood, empresa dedicada al diseño y fabricación de muebles...
+            </p>
+            <p>
+                Para más información... <a href="contacto.html">Política de Privacidad</a>.
+            </p>
+        </div>
+
+        <!-- Copy -->
+        <div class="footer-copy"> <!-- Sección con copyright -->
+            <p>&copy; 2025 ReWood. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> <!-- Script de Leaflet -->
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <!-- Script de Leaflet Routing -->
+    <script src="../js/mapa.js"></script> <!-- Script personalizado -->
+</body>
+
+</html>
